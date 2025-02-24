@@ -17,6 +17,21 @@
     --text-color:#1a2428;
     --bg-color:#fff;
 }
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+/* Custom scroll bar */
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background: var(--light-green-color)
+}
+::-webkit-scrollbar-thumb{
+    background: var(--green-color);
+    border-radius: 10px;
+    width: 0.5rem;
+}
 section{
     padding: 4.5rem 0 1.5rem;
 }
@@ -391,4 +406,97 @@ header{
 .review-profile h3{
     font-size: 1rem;
     font-weight: 600;
+}
+.footer{
+    max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit,minmax(200px ,auto));
+    margin-top: 2rem;
+    background: #fef4ea;
+    padding: 20px;
+    border-radius: 10px;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+.footer-box p{
+    font-size: 15px;
+    margin: 0.5rem 0 1rem;
+}
+.social{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+}
+.social .bx{
+    font-size: 20px;
+    background: var(--bg-color);
+    color: var(--green-color);
+    padding: 10px;
+    border-radius: 40px;
+}
+.social .bx:hover{
+    background: var(--green-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+}
+.footer-box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom:1rem;
+}
+.footer-box a{
+    margin-bottom: 10px;
+    color: #868a92;
+}
+.footer-box a:hover{
+    color: var(--light-orange-color);
+}
+.footer-box .form{
+    padding: 10px;
+    border: 1px solid var(--bg-color);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.footer-box .form input{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.footer-box .bx{
+    font-size:20px;
+    color: var(--light-orange-color);
+    cursor: pointer;
+}
+.footer-box .bxs-envelope{
+    color: var(--green-color) ;
+}
+
+/* Responsive */
+@media(max-width:1080px){
+    header{
+        padding: 18px 60px;
+    }
+    .home-text{
+        padding: 0 100px;
+    }
+   .container-img{
+        right: 100px;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
 }
